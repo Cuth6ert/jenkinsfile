@@ -1,1 +1,20 @@
-Hello Joe
+#!groovy
+// Check slave properties
+properties ([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+        label 'master'
+        }
+    options {
+        buildDiscarder (logRotator(numToKeepStr:'10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("Preparations) {
+            steps {
+                sh 'ssh root@192.168.8.112 \'hostname\''
+            }
+        }
+    }
+}
