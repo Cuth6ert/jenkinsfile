@@ -32,5 +32,10 @@ pipeline {
                 sh 'ssh root@192.168.8.112 \'systemctl status nginx\''
             }
         }
+        stage("Uname") {
+            steps {
+                sh 'ssh root@192.168.8.112 \'uname -a\''
+            }
+        }
 }
 }
