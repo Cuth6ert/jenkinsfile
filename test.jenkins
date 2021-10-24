@@ -26,9 +26,9 @@ pipeline {
                 sh 'ssh root@192.168.8.112 \'apt update\''
             }
         }
-        stage("Check apache") {
+        stage("Check nginx") {
             steps {
-                sh 'ssh root@192.168.8.112 \'systemctl status apache2\''
+                sh 'ssh root@192.168.8.112 \'systemctl status nginx\''
             }
         }
 }
