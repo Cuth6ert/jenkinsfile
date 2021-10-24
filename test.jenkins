@@ -1,6 +1,6 @@
 #!groovy
 // Check slave properties
-properties ([disableConcurrentBuilds()])
+properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
@@ -11,9 +11,16 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("test") {
+        stage("Hostname") {
             steps {
                 sh 'ssh root@192.168.8.112 \'hostname\''
+            }
+        }
+    }
+    stages {
+        stage("Uptime") {
+            steps {
+                sh 'ssh root@192.168.8.112 \'uptime\''
             }
         }
     }
