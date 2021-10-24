@@ -16,12 +16,10 @@ pipeline {
                 sh 'ssh root@192.168.8.112 \'hostname\''
             }
         }
-    }
-    stages {
         stage("Uptime") {
             steps {
                 sh 'ssh root@192.168.8.112 \'uptime\''
             }
         }
-    }
+}
 }
