@@ -24,4 +24,12 @@ pipeline {
             }
         }
     }
+    stages {
+        stage("uname") {
+            steps {
+                sh 'ssh root@192.168.8.112 \'uname -a\''
+            }
+        }
+    }
+
 }
