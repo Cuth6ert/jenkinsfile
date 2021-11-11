@@ -28,7 +28,7 @@ pipeline {
         }
         stage("Status") {
             steps {
-                sh 'sudo ssh ubuntu@172.31.10.65 \'systemctl status nano\''
+                sh 'sudo ssh ubuntu@172.31.10.65 \'systemctl status sshd\''
             }
         }
 }
