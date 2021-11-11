@@ -17,26 +17,19 @@ pipeline {
             }
         }
     }
-    stages {
         stage("Uptime") {
             steps {
                 sh 'ssh ubuntu@172.31.10.65 \'uptime\''
             }
         }
-    }
-    stages {
         stage("uname") {
             steps {
                 sh 'ssh ubuntu@172.31.10.65 \'uname -a\''
             }
         }
-    }
-    stages {
         stage("Status") {
             steps {
                 sh 'ssh ubuntu@172.31.10.65 \'systemctl status nano\''
             }
         }
-    }
-
 } 
