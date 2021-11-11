@@ -13,22 +13,22 @@ pipeline {
     stages {
         stage("Hostname") {
             steps {
-                sh 'ssh ubuntu@172.31.10.65 \'hostname\''
+                sh 'sudo ssh ubuntu@172.31.10.65 \'hostname\''
             }
         }
         stage("Uptime") {
             steps {
-                sh 'ssh ubuntu@172.31.10.65 \'uptime\''
+                sh 'sudo ssh ubuntu@172.31.10.65 \'uptime\''
             }
         }
         stage("uname") {
             steps {
-                sh 'ssh ubuntu@172.31.10.65 \'uname -a\''
+                sh 'sudo ssh ubuntu@172.31.10.65 \'uname -a\''
             }
         }
         stage("Status") {
             steps {
-                sh 'ssh ubuntu@172.31.10.65 \'systemctl status nano\''
+                sh 'sudo ssh ubuntu@172.31.10.65 \'systemctl status nano\''
             }
         }
 }
