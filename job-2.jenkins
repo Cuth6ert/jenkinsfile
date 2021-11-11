@@ -13,28 +13,28 @@ pipeline {
     stages {
         stage("Hostname") {
             steps {
-                sh 'ssh root@192.168.8.112 \'hostname\''
+                sh 'ssh ubuntu@172.31.10.65 \'hostname\''
             }
         }
     }
     stages {
         stage("Uptime") {
             steps {
-                sh 'ssh root@192.168.8.112 \'uptime\''
+                sh 'ssh ubuntu@172.31.10.65 \'uptime\''
             }
         }
     }
     stages {
         stage("uname") {
             steps {
-                sh 'ssh root@192.168.8.112 \'uname -a\''
+                sh 'ssh ubuntu@172.31.10.65 \'uname -a\''
             }
         }
     }
     stages {
         stage("Status") {
             steps {
-                sh 'ssh root@192.168.8.112 \'systemctl status nginx\''
+                sh 'ssh ubuntu@172.31.10.65 \'systemctl status nano\''
             }
         }
     }
