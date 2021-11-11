@@ -16,7 +16,6 @@ pipeline {
                 sh 'ssh ubuntu@172.31.10.65 \'hostname\''
             }
         }
-    }
         stage("Uptime") {
             steps {
                 sh 'ssh ubuntu@172.31.10.65 \'uptime\''
@@ -32,4 +31,5 @@ pipeline {
                 sh 'ssh ubuntu@172.31.10.65 \'systemctl status nano\''
             }
         }
-} 
+}
+}
